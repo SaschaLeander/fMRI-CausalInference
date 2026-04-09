@@ -35,7 +35,7 @@ The analysis asks which brain features are:
 - Joint encoding-decoding tables for interpretation
 - Visualization outputs at individual and group summary levels
 
-## Figures
+## Project Content
 
 ### 1) Setup Plot (Task/Design Overview)
 
