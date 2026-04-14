@@ -2,6 +2,23 @@
 
 This repository contains the core scripts used in the lab report workflow for causal interpretation of fMRI signals during binocular rivalry (BR) and replay conditions.
 
+## Dependencies Setup
+
+The project environment can be set up either with conda or pip.
+
+### Pip requirements file 
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r repo/requirements.txt
+```
+
+You can verify the core packages with:
+
+```bash
+python -c "import numpy, pandas, matplotlib, nilearn, sklearn, nipype, jupyter; print('Dependencies OK')"
+```
 ## Goal
 
 The analysis asks which brain features are:
@@ -18,7 +35,7 @@ The analysis asks which brain features are:
    Shared helpers for subject/session overview and temporal diagnostics.
 
 3. [3_decode_subjects.py](3_decode_subjects.py)  
-   Subject-level decoding pipeline (GLM-derived maps -> ICA/feature space -> classifier evaluation).
+   Subject-level decoding pipeline (GLM-derived maps -> ICA/atlas feature space -> classifier evaluation).
 
 4. [4_create_joint_enc_dec.py](4_create_joint_enc_dec.py)  
    Creates a joint encoding-decoding dataframe. Supports:
@@ -35,7 +52,7 @@ The analysis asks which brain features are:
 - Joint encoding-decoding tables for interpretation
 - Visualization outputs at individual and group summary levels
 
-## Project Content
+## Figures
 
 ### 1) Setup Plot (Task/Design Overview)
 
