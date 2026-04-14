@@ -24,7 +24,7 @@ python -c "import numpy, pandas, matplotlib, nilearn, sklearn, nipype, jupyter; 
 The analysis asks which brain features are:
 - associated with stimulus-related information (encoding),
 - predictive of perceptual/readout labels (decoding), and
-- jointly informative for causal interpretation across BR and Replay.
+- jointly informative for causal interpretation across rivalry (response-based) and replay (stimulus-based) experimental paradigms.
 
 ## Analysis Order
 
@@ -47,10 +47,11 @@ The analysis asks which brain features are:
 
 ## Core Outputs
 
-- Encoding tables (`num_significant_features`, selected feature indices, p-values)
-- Decoding tables (accuracy metrics, selected feature indices, p-values)
+- Encoding (GLM-based)
+- Decoding (logistic regression with L1/L2 regularization based on GLM)
+- Relevance testing of ICA and atlas features
 - Joint encoding-decoding tables for interpretation
-- Visualization outputs at individual and group summary levels
+- Visualization of outputs at individual and group summary levels
 
 ## Figures
 
@@ -76,20 +77,3 @@ The analysis asks which brain features are:
 
 **Caption:** The figure shows the number of subjects with relevant features for ICA (left) and atlas (right), separated into rivalry and replay conditions. Warmer colors indicate higher overlap. ICA maps show higher peak overlap and more spatially consistent patterns, particularly in rivalry, whereas atlas maps appear more diffuse with lower maximum overlap. The captions for each individual plot indicate the maximum overlap for the respective condition and the number of subjects included. For excluded subjects, we did not find any relevant features in the respective condition.
 
-## Minimal Usage
-
-Run from project root (after environment activation):
-
-- Build joint dataframe from existing outputs (atlas or ICA):
-  - `python repo/4_create_joint_enc_dec.py --feature-space atlas --mode merge`
-  - `python repo/4_create_joint_enc_dec.py --feature-space ica --mode merge`
-
-- Full ICA encoding+decoding+joint workflow:
-  - `python repo/4_create_joint_enc_dec.py --feature-space ica --mode run-ica-analysis`
-
-Then open [5_causal_interpretations.ipynb](5_causal_interpretations.ipynb) for interpretation plots and summary tables.
-
-## Notes
-
-- Paths inside scripts should match your local data/output layout.
-- The repository is organized as a compact, report-oriented subset of the full project pipeline.
