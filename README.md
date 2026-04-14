@@ -11,7 +11,7 @@ The project environment can be set up either with conda or pip.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r repo/requirements.txt
+pip install -r requirements.txt
 ```
 
 You can verify the core packages with:
