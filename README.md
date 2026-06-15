@@ -9,15 +9,15 @@ The project environment can be set up either with conda or pip.
 ### Pip requirements file 
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+conda create -m myenv
+conda activate myenv
 pip install -r requirements.txt
 ```
 
 You can verify the core packages with:
 
 ```bash
-python -c "import numpy, pandas, matplotlib, nilearn, sklearn, nipype, jupyter; print('Dependencies OK')"
+python -c "import numpy, pandas, matplotlib, nilearn, sklearn, nipype, jupyter"
 ```
 ## Goal
 
