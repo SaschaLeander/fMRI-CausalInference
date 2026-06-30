@@ -40,7 +40,7 @@ The analysis asks which brain features are:
 4. [4_create_joint_enc_dec.py](4_create_joint_enc_dec.py)  
    Creates a joint encoding-decoding dataframe. Supports:
    - ICA pipeline mode (`run-ica-analysis`), and
-   - merge mode for existing ICA **or atlas** encoding/decoding CSVs.
+   - merge mode for existing ICA or atlas encoding/decoding CSVs.
 
 5. [5_causal_interpretations.ipynb](5_causal_interpretations.ipynb)  
    Visual and table-based causal interpretation on joint outputs.
