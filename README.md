@@ -1,6 +1,6 @@
 # Causal Inference in fMRI: Binocular Rivalry vs Replay
 
-This repository contains the core scripts used in the lab report workflow for causal interpretation of fMRI signals during binocular rivalry (BR) and replay conditions.
+This repository contains the core scripts used and the documentation for causal interpretation of fMRI signals during binocular rivalry (BR) and replay conditions.
 
 ## Dependencies Setup
 
